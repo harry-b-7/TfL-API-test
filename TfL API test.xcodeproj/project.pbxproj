@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A71370E26A1988F008F553C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A71370D26A1988F008F553C /* main.swift */; };
+		847B7F770A3EA12382C7BFCC /* Pods_TfL_API_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B66DA00177DBE867ACC422B /* Pods_TfL_API_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		1A71370A26A1988F008F553C /* TfL API test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TfL API test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A71370D26A1988F008F553C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4B66DA00177DBE867ACC422B /* Pods_TfL_API_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TfL_API_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DADC4E3EEB9BB09D78542C /* Pods-TfL API test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TfL API test.release.xcconfig"; path = "Target Support Files/Pods-TfL API test/Pods-TfL API test.release.xcconfig"; sourceTree = "<group>"; };
+		FF5D48AA13911B927403D646 /* Pods-TfL API test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TfL API test.debug.xcconfig"; path = "Target Support Files/Pods-TfL API test/Pods-TfL API test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847B7F770A3EA12382C7BFCC /* Pods_TfL_API_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				1A71370C26A1988F008F553C /* TfL API test */,
 				1A71370B26A1988F008F553C /* Products */,
+				FDDD871CE4AAFE3606C5FDC9 /* Pods */,
+				4F893E09B8AFC521942BA101 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +69,23 @@
 			path = "TfL API test";
 			sourceTree = "<group>";
 		};
+		4F893E09B8AFC521942BA101 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B66DA00177DBE867ACC422B /* Pods_TfL_API_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDDD871CE4AAFE3606C5FDC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D48AA13911B927403D646 /* Pods-TfL API test.debug.xcconfig */,
+				E1DADC4E3EEB9BB09D78542C /* Pods-TfL API test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -69,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A71371126A1988F008F553C /* Build configuration list for PBXNativeTarget "TfL API test" */;
 			buildPhases = (
+				3CAB35C7B71F3F63A9CE02D6 /* [CP] Check Pods Manifest.lock */,
 				1A71370626A1988F008F553C /* Sources */,
 				1A71370726A1988F008F553C /* Frameworks */,
 				1A71370826A1988F008F553C /* CopyFiles */,
@@ -113,6 +138,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CAB35C7B71F3F63A9CE02D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TfL API test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A71370626A1988F008F553C /* Sources */ = {
@@ -243,8 +293,16 @@
 		};
 		1A71371226A1988F008F553C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5D48AA13911B927403D646 /* Pods-TfL API test.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -252,8 +310,16 @@
 		};
 		1A71371326A1988F008F553C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1DADC4E3EEB9BB09D78542C /* Pods-TfL API test.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
